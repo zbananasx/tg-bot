@@ -67,7 +67,7 @@ export function messagInBack(bot) {
 });
 }
 export function rickroll(bot) {
-    bot.command('buttonsiniine', (ctx) => {
+    bot.command('buttonsinline', (ctx) => {
         ctx.reply('не выбирай пж',  {
         reply_markup: {
             inline_keyboard: [
