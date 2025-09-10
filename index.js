@@ -1,6 +1,6 @@
 import { Telegraf } from "telegraf";
 import { token } from "./cfg.js";
-import { help, messagInBack, removKeyboard, vtorayaButton, tretyaButton, spy, buttons, firstButton, rickroll, setMenu } from "./botUses.js";
+import { help, messagInBack, removKeyboard, vtorayaButton, tretyaButton, spy, buttons, firstButton, rickroll, setMenu, start } from "./botUses.js";
 const bot = new Telegraf(token.telegramToken, {});
 // Обрабатываем команду /start
 start(bot)
