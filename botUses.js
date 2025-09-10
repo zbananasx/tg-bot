@@ -10,28 +10,17 @@ export function help (bot) {bot.help((ctx)=> {
 
     }
 export function start(bot) {
-bot.start((ctx) => {
-    ctx.replyWithPhoto(
-        {url:'image/me.jpg'},
-        {
-            caption: ` *Добро пожаловать, ${ctx.from.first_name}!*\n\n` +
-                     ` Что умеет этот бот?\n` +
-                     ` Основные функции:\n` +
-                     `     круто тапать!\n` +
-                     `  невероятно тапать!\n\n` +
-                     `Выберите действие для начала: 👇`,
-            parse_mode: 'Markdown',
-            reply_markup: {
-                inline_keyboard: [
-                    [
-                       [{text: 'тапалка ебейшая228', web_app: {url: 'https://web-app-production-536a.up.railway.app/'}}],
-                       [{text: 'чемпион жесткий', url: 'https://steamcommunity.com/profiles/76561199008763629/'}],
-                       [{text: 'нуб нубовый', url: 'https://steamcommunity.com/id/IA_NE_PENDOS'}]
-                    ],
-                ]
-            }
+    bot.start((ctx) => {
+    ctx.reply(`Привет хуесос, ой, то есть ${ctx.from.first_name}, короче вот тебе кнопочки жамкай`, {
+        reply_markup: {
+            inline_keyboard: [
+                [{text: 'тапалка ебейшая228', web_app: {url: 'https://web-app-production-536a.up.railway.app/'}}],
+                [{text: 'чемпион жесткий', url: 'https://steamcommunity.com/profiles/76561199008763629/'}],
+                [{text: 'нуб нубовый', url: 'https://steamcommunity.com/id/IA_NE_PENDOS'}]
+            ]
         }
-    );
+    }
+        );
 });
 }
 
