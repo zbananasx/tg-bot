@@ -1,17 +1,16 @@
 export function help (bot) {bot.help((ctx)=> {
     ctx.reply(`
-        АХАХАХАХАХАХ, ебать ты дебил, на помощь зовешь, ладно вот тебе
-        /start - повторить начало(сам хз нахуя, но пусть будет)
-        /help - позорно звать на помощь ахахахах
-        /buttons228 - кнопочки, но пока не тапалка
-        /spy - шпионить жестко как чемпик
-        /buttonsinline кнопочки попизже(тапалка тоже тут)
+        вот список команд которые имеются на данный момент
+        /help - узнать список команд
+        /buttons228 - обычные кнопки(сам кликер в buttonin)
+        /spy - обычная кнопка без какого либо смысла
+        /buttonsinline ссылки и приложение
         `)})
 
     }
 export function start(bot) {
     bot.start((ctx) => {
-    ctx.reply(`Привет хуесос, ой, то есть ${ctx.from.first_name}, короче вот тебе кнопочки жамкай`, {
+    ctx.reply(`Приветствую ${ctx.from.first_name} в своем боте, тут можно найти мой кликер(и возможно больше проектов в будующем)`, {
         reply_markup: {
             inline_keyboard: [
                 [{text: 'тапалка ебейшая228', web_app: {url: 'https://web-app-production-536a.up.railway.app/'}}],
@@ -26,7 +25,7 @@ export function start(bot) {
 
 export function buttons (bot) {
     bot.command('buttons228', (ctx) => {
-    ctx.reply('вот тебе и кнопочки адун балдун', {
+    ctx.reply('вот тебе и кнопочки', {
         reply_markup: {
             keyboard: [
                 [{text:'первая кнопка'}, {text: 'вторая кнопка?'}],
@@ -42,7 +41,7 @@ export function buttons (bot) {
 }
 export function spy (bot) {
     bot.command('spy', (ctx) => {
-    ctx.reply('че подсматриваешь', {
+    ctx.reply('не подсматривай', {
 });
 })
 }
@@ -50,25 +49,25 @@ export function spy (bot) {
 
 export function firstButton(bot) {
     bot.hears('первая кнопка', (ctx) => {
-    ctx.reply('и зачем ты на нее нажал?')
+    ctx.reply('и зачем ты на нее нажал(а)?')
 });
 }
 
 export function vtorayaButton(bot) {
     bot.hears('вторая кнопка?', (ctx) => {
-    ctx.reply('хватит кнопки тыркать адун')
+    ctx.reply('хватит кнопки тыркать')
 });
 }
 
 export function tretyaButton(bot) {
     bot.hears('третья кнопка', (ctx) => {
-    ctx.reply('третья лишняя была, думаю')
+    ctx.reply('думаю, третьей кнопки здесь и не должно быть')
 });
 }
 
 export function removKeyboard(bot) {
     bot.hears('убрать клавиатуру', (ctx) => {
-    ctx.reply('ладно уберу, козел', {
+    ctx.reply('ладно, уберу', {
         reply_markup: {remove_keyboard: true},
     })
 });
@@ -76,16 +75,16 @@ export function removKeyboard(bot) {
 
 export function messagInBack(bot) {
     bot.on('text', (ctx)  => {
-    ctx.reply(`соси, пиши ток то что есть или буду отвечать одно и тоже, козел`)
+    ctx.reply(`прошу писать только то, что имеется во вкладке /help`)
 });
 }
 export function rickroll(bot) {
     bot.command('buttonsinline', (ctx) => {
-        ctx.reply('не выбирай пж',  {
+        ctx.reply('тут находится сам мини апп и 2 ссылки',  {
         reply_markup: {
             inline_keyboard: [
-                [{text: 'точно не крутая кнопка', url: 'https://www.youtube.com/watch?v=oPLObjVAvIU'}],
-                [{text: 'чемпион жесткий', url: 'https://steamcommunity.com/profiles/76561199008763629/'}],
+                [{text: 'рикролл', url: 'https://www.youtube.com/watch?v=oPLObjVAvIU'}],
+                [{text: 'мой стим', url: 'https://steamcommunity.com/profiles/76561199008763629/'}],
                 // [{text: 'нуб нубовый', url: 'https://steamcommunity.com/id/IA_NE_PENDOS'}]
                 [{text: 'а вот и таплка', web_app: {url: 'https://web-app-production-536a.up.railway.app/'}}]
             ]
@@ -95,7 +94,7 @@ export function rickroll(bot) {
 }
 export function setMenu(bot) {
     bot.telegram.setMyCommands([
-        {command: `help`, description: 'запросить подмоги'},
-       {command: `buttonsinline`, description: 'тапалка тут'}
+        {command: `help`, description: 'узнать список команд'},
+       {command: `buttonsinline`, description: 'ссылки и кликер'}
     ])
 }
