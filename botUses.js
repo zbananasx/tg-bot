@@ -95,7 +95,10 @@ export function rickroll(bot) {
 }
 export function setMenu(bot) {
     bot.telegram.setMyCommands([
+        {command: `start`, description: `начать ознакомление`},
         {command: `help`, description: 'узнать список команд'},
-       {command: `buttonsinline`, description: 'ссылки и кликер'}
+       {command: `buttonsinline`, description: 'ссылки и кликер'},
+       {command: `buttons228`, description: 'Обычные кнопки'},
+       {command: `spy`, description: 'Секретная команда'}
     ])
 }
