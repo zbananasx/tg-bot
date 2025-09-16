@@ -14,9 +14,9 @@ export function start(bot) {
     ctx.reply(`Приветствую ${ctx.from.first_name} в своем боте, тут можно найти мой кликер(и возможно больше проектов в будующем)`, {
         reply_markup: {
             inline_keyboard: [
-                [{text: 'тапалка ебейшая228', web_app: {url: 'https://web-app-production-536a.up.railway.app/'}}],
-                [{text: 'чемпион жесткий', url: 'https://steamcommunity.com/profiles/76561199008763629/'}],
-                [{text: 'нуб нубовый', url: 'https://steamcommunity.com/id/IA_NE_PENDOS'}]
+                [{text: 'сам кликер', web_app: {url: 'https://web-app-production-536a.up.railway.app/'}}],
+                [{text: 'мой стим', url: 'https://steamcommunity.com/profiles/76561199008763629/'}],
+                [{text: 'стим дубины', url: 'https://steamcommunity.com/id/IA_NE_PENDOS'}]
             ]
         }
     }
