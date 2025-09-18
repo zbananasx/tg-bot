@@ -87,7 +87,7 @@ export function rickroll(bot) {
                 [{text: 'рикролл', url: 'https://www.youtube.com/watch?v=oPLObjVAvIU'}],
                 [{text: 'мой стим', url: 'https://steamcommunity.com/profiles/76561199008763629/'}],
                 // [{text: 'нуб нубовый', url: 'https://steamcommunity.com/id/IA_NE_PENDOS'}]
-                [{text: 'а вот и таплка', web_app: {url: 'web-app-production-536a.up.railway.app/'}}]
+                [{text: 'а вот и таплка', web_app: {url: 'web-app-production-a653.up.railway.app/'}}]
             ]
         }
     })
